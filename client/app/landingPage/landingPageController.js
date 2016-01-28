@@ -21,7 +21,7 @@ landingPage.controller('landingPageController', ['$http', 'auth', 'store', '$loc
       // TODO make sure user is in DB == look up exactly what store.set does and $location.path
       $location.path('/navbar/dashboard');
     }, function() {
-      console.log('THIS IS AUTHCONTROLLER GOOGLE ERROR', error)
+      console.log('THIS IS AUTHCONTROLLER GOOGLE ERROR')
     });
   };
 
