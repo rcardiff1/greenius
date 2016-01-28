@@ -17,11 +17,10 @@ landingPage.controller('landingPageController', ['$http', 'auth', 'store', '$loc
       //success callback
       store.set('profile', profile);
       store.set('token', token);
-      console.log('LANDING PAGE PROFILE', profile, 'LANDING PAGE TOKEN', token);
       // TODO make sure user is in DB == look up exactly what store.set does and $location.path
       $location.path('/navbar/dashboard');
     }, function() {
-      console.log('THIS IS AUTHCONTROLLER GOOGLE ERROR')
+      // console.log('THIS IS AUTHCONTROLLER GOOGLE ERROR');
     });
   };
 
