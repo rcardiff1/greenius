@@ -3,7 +3,12 @@ var bodyParser = require('body-parser');
 var jwt = require('express-jwt');
 // var config = require('./../env/config.js');
 
-module.exports = function(app, express, jwtCheck){
+module.exports = function(app, express){
+
+  var jwtCheck = jwt({
+    secret: new Buffer(process.env.AUTH0_CLIENT_SECRET),
+    audience: '909iKBxjdoJbblSUwtwFKFwfkqZss09d'
+  });
 
 	app.use(morgan('dev'));
 	app.use(bodyParser.json());
